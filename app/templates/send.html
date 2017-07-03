@@ -1,0 +1,28 @@
+<html>
+<head>
+    
+</head>
+<body>
+
+	{% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+            <li>{{ message }} </li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    
+    <h1>Send FLO</h1>
+    <form action="" method="post" name="login">
+        {{ form.hidden_tag() }}
+        <p>
+            Recipient's address: {{ form.address(size=80) }}
+            <br>Amount of FLO: {{ form.amount }}
+            <br>Transaction comment: {{ form.comm }}
+        </p>
+        <p><input type="submit" value="Send"></p>
+    </form>
+</body>
+</html>

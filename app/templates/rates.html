@@ -1,0 +1,23 @@
+<html>
+<head>
+    
+</head>
+<body>
+
+	{% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+            <li>{{ message }} </li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    
+    <h1>Rates</h1>
+    <p>
+        Poloniex : {{polxprice}} BTC
+        <br>Bittrex : {{btrexprice}} BTC
+    </p>
+</body>
+</html>

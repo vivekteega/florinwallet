@@ -1,0 +1,50 @@
+<html>
+<head>
+    
+</head>
+<body>
+
+<p><a href="http://localhost:5000/send">Send</a>
+   <a href="http://localhost:5000/receive">Receive</a>
+   <a href="http://localhost:5000/backup">Backup & Import</a>
+   <a href="http://localhost:5000/rates">Market rates</a></p>
+
+	{% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+            <li>{{ message }} </li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    
+    <h1>FLO wallet</h1>
+    <p>
+       <u>Balance </u>
+       <br>
+       Available - {{available}}
+       <br>
+       Pending - {{pending}}
+    </p>
+    <br>
+    <br>
+
+    <table>
+    <tr>
+            <th>Address</th>
+            <th>Amount</th>
+            <th>Spendable</th>
+    </tr>
+    {% for row in tablelst %}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+    </tr>
+    {% endfor %}
+
+    </table>
+
+</body>
+</html>
