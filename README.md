@@ -1,7 +1,7 @@
 Florincoin webapp
 =========
 
-The webapp is 
+The webapp interacts with the instance of Florincoin wallet on being run on the machine. It is useful for the users who want to access the wallet remotely but do not want to make RPC calls directly to the wallet, for security reasons.
 
 Running
 -------
