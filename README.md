@@ -1,11 +1,7 @@
 Florincoin webapp
 =========
 
-
-
-Installation
-------------
-
+The webapp is 
 
 Running
 -------
